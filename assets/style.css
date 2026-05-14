@@ -1,0 +1,13 @@
+body { font-family: sans-serif; margin: 2rem; }
+#grid { display: inline-grid; margin-bottom: 1rem; }
+.cell {
+  width: 2.2rem; height: 2.2rem;
+  border: 1px solid #444;
+  text-align: center; font-size: 1.2rem;
+  text-transform: uppercase;
+}
+.cell.filled { background: #fff8dc; }
+.cell.blocked { background: #222; color: #fff; }
+#clues { column-count: 2; }
+#msg { margin-top: 1rem; font-weight: bold; }
+input { width: 100%; text-align: center; font-size: 1.2rem; }
