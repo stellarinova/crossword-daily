@@ -25,31 +25,25 @@ jobs:
             "width": 5,
             "height": 5,
             "cells": [
-              1,0,2,0,3,
-              0,0,0,0,0,
-              4,0,5,0,6,
-              0,0,0,0,0,
-              7,0,8,0,9
+              1,0,0,0,0,
+              null,null,null,null,null,
+              2,0,0,0,0,
+              null,null,null,null,null,
+              3,0,0,0,0
             ],
-            "solution": ["H","E","L","L","O",
-                         "A","B","C","D","E",
-                         "L","I","V","E","S",
-                         "T","E","S","T","S",
-                         "W","O","R","L","D"],
+            "solution": [
+              "H","E","L","L","O",
+              "","","","","",
+              "W","O","R","L","D",
+              "","","","","",
+              "L","I","V","E","S"
+            ],
             "across": [
-              {"num":1,"clue":"Greeting"},
-              {"num":4,"clue":"Plural of life"},
-              {"num":7,"clue":"Verb: to examine"},
-              {"num":8,"clue":"Planet we live on"}
+              { "num": 1, "clue": "Greeting" },
+              { "num": 2, "clue": "Planet we live on" },
+              { "num": 3, "clue": "Plural of life" }
             ],
-            "down": [
-              {"num":1,"clue":"Chemical symbol for helium"},
-              {"num":2,"clue":"To obtain"},
-              {"num":3,"clue":"Opposite of win"},
-              {"num":5,"clue":"Plural of box"},
-              {"num":6,"clue":"Past tense of be"},
-              {"num":9,"clue":"To pull"}
-            ]
+            "down": []
           }
           EOF
 
