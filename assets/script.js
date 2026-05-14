@@ -22,7 +22,8 @@ function buildGrid(p) {
 
     if (cell === null) { // blocked square
       div.classList.add('blocked');
-      div.textContent = '';
+      // Ensure the cell has some content so it occupies space
+      div.innerHTML = '&nbsp;';
     } else if (cell === 0) { // empty square to fill
       div.classList.add('empty');
       const inp = document.createElement('input');
