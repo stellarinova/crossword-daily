@@ -4,10 +4,15 @@ let today = new Date().toISOString().slice(0,10); // YYYY-MM-DD
 fetch('puzzle.json')
   .then(r => r.json())
   .then(data => {
+    console.log('Puzzle loaded:', data);
     puzzle = data;
     document.getElementById('date').textContent = `Date: ${data.date}`;
     buildGrid(data);
     buildClues(data);
+  })
+  .catch(err => {
+    console.error('Failed to load puzzle.json', err);
+    document.getElementById('date').textContent = 'Error loading puzzle';
   });
 
 function buildGrid(p) {
@@ -22,7 +27,6 @@ function buildGrid(p) {
 
     if (cell === null) { // blocked square
       div.classList.add('blocked');
-      // Ensure the cell has some content so it occupies space
       div.innerHTML = '&nbsp;';
     } else if (cell === 0) { // empty square to fill
       div.classList.add('empty');
@@ -33,7 +37,6 @@ function buildGrid(p) {
       inp.dataset.idx = idx;
       inp.addEventListener('input', e => {
         e.target.value = e.target.value.toUpperCase();
-        // store answer in a hidden attribute for later checking
         div.dataset.answer = e.target.value;
       });
       div.appendChild(inp);
@@ -43,6 +46,13 @@ function buildGrid(p) {
     }
     grid.appendChild(div);
   });
+  // Debug: show grid HTML
+  // const debug = document.createElement('div');
+  // debug.style.marginTop = '1rem';
+  // debug.style.fontFamily = 'monospace';
+  // debug.style.whiteSpace = 'pre';
+  // debug.textContent = grid.innerHTML;
+  // document.body.appendChild(debug);
 }
 
 function buildClues(p) {
