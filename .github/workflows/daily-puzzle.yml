@@ -1,21 +1,17 @@
 name: Daily Crossword Build
-
 on:
   schedule:
     - cron: '5 0 * * *'
   workflow_dispatch:
-
 jobs:
   build-puzzle:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-
       - name: Generate today's puzzle
         id: gen
         run: |
@@ -31,26 +27,25 @@ jobs:
               7,0,0,0
             ],
             "solution": [
-              "L","A","K","E",
-              "A","R","E","A",
-              "K","E","Y","S",
-              "E","A","S","E"
+              "C","O","D","E",
+              "H","A","C","K",
+              "G","A","M","E",
+              "P","L","A","Y"
             ],
             "across": [
-              { "num": 1, "clue": "Body of water" },
-              { "num": 5, "clue": "Extent of surface" },
-              { "num": 6, "clue": "Objects for opening locks" },
-              { "num": 7, "clue": "Freedom from difficulty" }
+              { "num": 1, "clue": "Type of software" },
+              { "num": 5, "clue": "Illegally access" },
+              { "num": 6, "clue": "Form of entertainment" },
+              { "num": 7, "clue": "Engage in activity" }
             ],
             "down": [
-              { "num": 1, "clue": "Body of water" },
-              { "num": 2, "clue": "Extent of surface" },
-              { "num": 3, "clue": "Objects for opening locks" },
-              { "num": 4, "clue": "Freedom from difficulty" }
+              { "num": 1, "clue": "C" },
+              { "num": 2, "clue": "H" },
+              { "num": 3, "clue": "G" },
+              { "num": 4, "clue": "P" }
             ]
           }
           EOF
-
       - name: Commit puzzle.json
         run: |
           git config user.name "github-actions[bot]"
