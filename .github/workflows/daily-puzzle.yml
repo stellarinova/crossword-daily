@@ -21,28 +21,28 @@ jobs:
             "width": 4,
             "height": 4,
             "cells": [
-              1,2,3,4,
-              5,0,0,0,
+              1,2,3,null,
+              4,0,0,5,
               6,0,0,0,
-              7,0,0,0
+              null,7,0,0
             ],
             "solution": [
-              "C","O","D","E",
-              "H","A","C","K",
-              "G","A","M","E",
-              "P","L","A","Y"
+              "C","A","T","",
+              "A","R","E","A",
+              "T","E","N","D",
+              "","A","S","S"
             ],
             "across": [
-              { "num": 1, "clue": "Type of software" },
-              { "num": 5, "clue": "Illegally access" },
-              { "num": 6, "clue": "Form of entertainment" },
-              { "num": 7, "clue": "Engage in activity" }
+              { "num": 1, "clue": "Feline pet" },
+              { "num": 4, "clue": "Open expanse" },
+              { "num": 6, "clue": "To stretch or tenderize" },
+              { "num": 7, "clue": "Donkey" }
             ],
             "down": [
-              { "num": 1, "clue": "C" },
-              { "num": 2, "clue": "H" },
-              { "num": 3, "clue": "G" },
-              { "num": 4, "clue": "P" }
+              { "num": 1, "clue": "Feline pet" },
+              { "num": 2, "clue": "Open expanse" },
+              { "num": 3, "clue": "Ten-dollar bills" },
+              { "num": 5, "clue": "Short for advertisements" }
             ]
           }
           EOF
