@@ -22,31 +22,27 @@ jobs:
           cat > puzzle.json <<'EOF'
           {
             "date": "${{ github.event.schedule || 'manual' }}",
-            "width": 5,
-            "height": 5,
+            "width": 3,
+            "height": 3,
             "cells": [
-              1,0,0,0,0,
-              null,null,null,null,null,
-              2,0,0,0,0,
-              null,null,null,null,null,
-              3,0,0,0,0
+              1,2,3,
+              4,0,0,
+              5,0,0
             ],
             "solution": [
-              "H","E","L","L","O",
-              "","","","","",
-              "E","A","R","T","H",
-              "","","","","",
-              "L","I","V","E","S"
+              "C","A","T",
+              "A","R","E",
+              "T","E","N"
             ],
             "across": [
-              { "num": 1, "clue": "Greeting" },
-              { "num": 2, "clue": "Planet we live on" },
-              { "num": 3, "clue": "Plural of life" }
+              { "num": 1, "clue": "A feline animal" },
+              { "num": 4, "clue": "To exist or remain" },
+              { "num": 5, "clue": "Number after nine" }
             ],
             "down": [
-              { "num": 1, "clue": "First letter of across 1" },
-              { "num": 2, "clue": "First letter of across 2" },
-              { "num": 3, "clue": "First letter of across 3" }
+              { "num": 1, "clue": "A feline animal" },
+              { "num": 2, "clue": "To exist or remain" },
+              { "num": 3, "clue": "Number after nine" }
             ]
           }
           EOF
