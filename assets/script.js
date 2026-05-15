@@ -28,21 +28,23 @@ function buildGrid(p) {
     if (cell === null) { // blocked square
       div.classList.add('blocked');
       div.innerHTML = '&nbsp;';
-    } else if (cell === 0) { // empty square to fill
-      div.classList.add('empty');
+    } else { // editable square (may have a clue number)
+      div.classList.add('editable');
       const inp = document.createElement('input');
       inp.type = 'text';
       inp.maxLength = 1;
       inp.inputMode = 'uppercase';
       inp.dataset.idx = idx;
+      // Show clue number as placeholder if present
+      if (cell > 0) {
+        inp.placeholder = cell;
+      }
       inp.addEventListener('input', e => {
         e.target.value = e.target.value.toUpperCase();
+        // store answer in a hidden attribute for later checking
         div.dataset.answer = e.target.value;
       });
       div.appendChild(inp);
-    } else { // pre‑filled number (across/down clue start)
-      div.classList.add('filled');
-      div.textContent = cell;
     }
     grid.appendChild(div);
   });
@@ -68,7 +70,7 @@ document.getElementById('check').addEventListener('click', () => {
   let correct = true;
   const msg = document.getElementById('msg');
   puzzle.cells.forEach((cell, idx) => {
-    if (cell === 0) { // only check blanks
+    if (cell !== null) { // only check editable squares (0 or >0)
       const div = document.querySelector(`.cell[data-idx="${idx}"]`);
       const inp = div.querySelector('input');
       const given = (inp.value || '').toUpperCase();
