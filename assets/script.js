@@ -21,40 +21,64 @@ function buildGrid(p) {
   grid.style.gridTemplateColumns = `repeat(${p.width}, auto)`;
 
   p.cells.forEach((cell, idx) => {
+    console.log(`Processing cell idx=${idx}, value=${cell}`);
     const div = document.createElement('div');
     div.className = 'cell';
     div.dataset.idx = idx;
+    div.style.position = 'relative';
 
     if (cell === null) { // blocked square
       div.classList.add('blocked');
       div.innerHTML = '&nbsp;';
     } else { // editable square (may have a clue number)
       div.classList.add('editable');
+      // Clue number span if needed
+      if (cell > 0) {
+        const numSpan = document.createElement('span');
+        numSpan.textContent = cell;
+        numSpan.style.position = 'absolute';
+        numSpan.style.top = '2px';
+        numSpan.style.left = '2px';
+        numSpan.style.fontSize = '0.7em';
+        numSpan.style.color = '#555';
+        div.appendChild(numSpan);
+      }
+      // Input field
       const inp = document.createElement('input');
       inp.type = 'text';
       inp.maxLength = 1;
       inp.inputMode = 'uppercase';
       inp.dataset.idx = idx;
-      // Show clue number as placeholder if present
-      if (cell > 0) {
-        inp.placeholder = cell;
-      }
+      inp.style.position = 'absolute';
+      inp.style.top = '0';
+      inp.style.left = '0';
+      inp.style.right = '0';
+      inp.style.bottom = '0';
+      inp.style.border = '1px solid #999';
+      inp.style.borderRadius = '2px';
+      inp.style.background = '#fff';
+      inp.style.fontSize = '1.2rem';
+      inp.style.textAlign = 'center';
+      inp.style.textTransform = 'uppercase';
+      inp.style.outline = 'none';
+      inp.style.boxSizing = 'border-box';
+      inp.style.padding = '0';
       inp.addEventListener('input', e => {
         e.target.value = e.target.value.toUpperCase();
-        // store answer in a hidden attribute for later checking
         div.dataset.answer = e.target.value;
       });
       div.appendChild(inp);
     }
     grid.appendChild(div);
   });
-  // Debug: show grid HTML
-  // const debug = document.createElement('div');
-  // debug.style.marginTop = '1rem';
-  // debug.style.fontFamily = 'monospace';
-  // debug.style.whiteSpace = 'pre';
-  // debug.textContent = grid.innerHTML;
-  // document.body.appendChild(debug);
+  // Debug: show number of inputs created
+  setTimeout(() => {
+    const inputs = document.querySelectorAll('#grid input');
+    console.log(`Total inputs found: ${inputs.length}`);
+    inputs.forEach((inp, i) => {
+      console.log(`Input ${i}: idx=${inp.dataset.idx}, value='${inp.value}'`);
+    });
+  }, 100);
 }
 
 function buildClues(p) {
