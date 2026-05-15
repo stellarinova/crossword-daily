@@ -10,16 +10,20 @@
     3,0,0,0,0
   ],
   "solution": [
-    "A","P","P","L","E",
+    "H","E","L","L","O",
     "","","","","",
-    "B","R","A","V","E",
+    "E","A","R","T","H",
     "","","","","",
-    "C","L","O","U","D"
+    "L","I","V","E","S"
   ],
   "across": [
-    { "num": 1, "clue": "A fruit" },
-    { "num": 2, "clue": "Courageous" },
-    { "num": 3, "clue": "White sky" }
+    { "num": 1, "clue": "Greeting" },
+    { "num": 2, "clue": "Planet we live on" },
+    { "num": 3, "clue": "Plural of life" }
   ],
-  "down": []
+  "down": [
+    { "num": 1, "clue": "First letter of across 1" },
+    { "num": 2, "clue": "First letter of across 2" },
+    { "num": 3, "clue": "First letter of across 3" }
+  ]
 }
