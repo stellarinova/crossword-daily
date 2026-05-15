@@ -22,27 +22,35 @@ jobs:
           cat > puzzle.json <<'EOF'
           {
             "date": "${{ github.event.schedule || 'manual' }}",
-            "width": 3,
-            "height": 3,
+            "width": 5,
+            "height": 5,
             "cells": [
-              1,2,3,
-              4,0,0,
-              5,0,0
+              1,2,3,4,5,
+              6,0,0,0,0,
+              7,0,0,0,0,
+              8,0,0,0,0,
+              9,0,0,0,0
             ],
             "solution": [
-              "C","A","T",
-              "A","R","E",
-              "T","E","N"
+              "H","E","A","R","T",
+              "E","A","G","L","E",
+              "A","M","B","E","R",
+              "R","E","S","I","N",
+              "T","R","E","N","D"
             ],
             "across": [
-              { "num": 1, "clue": "A feline animal" },
-              { "num": 4, "clue": "To exist or remain" },
-              { "num": 5, "clue": "Number after nine" }
+              { "num": 1, "clue": "A vital organ" },
+              { "num": 6, "clue": "A bird of prey" },
+              { "num": 7, "clue": "Fossilized tree resin" },
+              { "num": 8, "clue": "Sticky substance from trees" },
+              { "num": 9, "clue": "A general direction in which something is developing" }
             ],
             "down": [
-              { "num": 1, "clue": "A feline animal" },
-              { "num": 2, "clue": "To exist or remain" },
-              { "num": 3, "clue": "Number after nine" }
+              { "num": 1, "clue": "A vital organ" },
+              { "num": 2, "clue": "A bird of prey" },
+              { "num": 3, "clue": "Fossilized tree resin" },
+              { "num": 4, "clue": "Sticky substance from trees" },
+              { "num": 5, "clue": "A general direction in which something is developing" }
             ]
           }
           EOF
