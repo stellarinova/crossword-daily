@@ -17,41 +17,50 @@ jobs:
       - name: Generate today's puzzle
         id: gen
         run: |
-          cat > puzzle.json <<'EOF'
-          {
-            "date": "${{ github.event.schedule || 'manual' }}",
-            "width": 4,
-            "height": 4,
-            "cells": [
-              1,2,3,4,
-              5,0,0,0,
-              6,0,0,0,
-              7,0,0,0
-            ],
-            "solution": [
-              "C","O","D","E",
-              "O","P","E","N",
-              "D","E","A","R",
-              "E","N","D","S"
-            ],
-            "across": [
-              { "num": 1, "clue": "Cipher (4)" },
-              { "num": 5, "clue": "To uncover (4)" },
-              { "num": 6, "clue": "Dear (affectionate) (4)" },
-              { "num": 7, "clue": "Terminates (4)" }
-            ],
-            "down": [
-              { "num": 1, "clue": "Secret language (4)" },
-              { "num": 2, "clue": "Not closed (4)" },
-              { "num": 3, "clue": "Beloved (4)" },
-              { "num": 4, "clue": "Finishes (4)" }
-            ]
-          }
-          EOF
+          DATE=$(date -u +%Y-%m-%d)
+          PUZZLE_INDEX=$(( $(date +%j) % 3 ))
+          case $PUZZLE_INDEX in
+            0)
+              PUZZLE='{
+                "date":"'"$DATE"'",
+                "width":4,"height":4,
+                "cells":[1,2,3,4,5,0,0,0,6,0,0,0,7,0,0,0],
+                "solution":["C","O","D","E","O","P","E","N","D","E","A","R","E","N","D","S"],
+                "across":[{"num":1,"clue":"Cipher (4)"},{"num":5,"clue":"To uncover (4)"},{"num":6,"clue":"Dear (affectionate) (4)"},{"num":7,"clue":"Terminates (4)"}],
+                "down":[{"num":1,"clue":"Secret language (4)"},{"num":2,"clue":"Not closed (4)"},{"num":3,"clue":"Beloved (4)"},{"num":4,"clue":"Finishes (4)"}]
+              }'
+              ;;
+            1)
+              PUZZLE='{
+                "date":"'"$DATE"'",
+                "width":4,"height":4,
+                "cells":[1,2,3,4,5,0,0,0,6,0,0,0,7,0,0,0],
+                "solution":["L","A","K","E","A","R","E","A","K","E","Y","S","E","A","S","E"],
+                "across":[{"num":1,"clue":"Body of water"},{"num":5,"clue":"Extent of surface"},{"num":6,"clue":"Objects for opening locks"},{"num":7,"clue":"Freedom from difficulty"}],
+                "down":[{"num":1,"clue":"Body of water"},{"num":2,"clue":"Extent of surface"},{"num":3,"clue":"Objects for opening locks"},{"num":4,"clue":"Freedom from difficulty"}]
+              }'
+              ;;
+            2)
+              PUZZLE='{
+                "date":"'"$DATE"'",
+                "width":4,"height":4,
+                "cells":[1,2,3,4,5,0,0,0,6,0,0,0,7,0,0,0],
+                "solution":["B","L","U","E","G","R","A","Y","R","E","D","S","S","O","F","T"],
+                "across":[{"num":1,"clue":"Color (4)"},{"num":5,"clue":"Pale (4)"},{"num":6,"clue":"Red (4)"},{"num":7,"clue":"Not hard (4)"}],
+                "down":[{"num":1,"clue":"Color (4)"},{"num":2,"clue":"Pale (4)"},{"num":3,"clue":"Red (4)"},{"num":4,"clue":"Not hard (4)"}]
+              }
+              ;;
+          esac
+          echo "$PUZZLE" > puzzle.json
       - name: Commit puzzle.json
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add puzzle.json
-          git commit -m "Update puzzle for ${{ github.event.schedule || 'manual' }}"
-          git push
+          # Check if there are changes to avoid empty commit error
+          if ! git diff --cached --quiet; then
+            git commit -m "Update puzzle for $DATE"
+            git push
+          else
+            echo "No changes in puzzle.json"
+          fi
