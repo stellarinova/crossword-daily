@@ -32,16 +32,16 @@ jobs:
               3,0,0,0,0
             ],
             "solution": [
-              "H","E","L","L","O",
+              "A","P","P","L","E",
               "","","","","",
-              "E","A","R","T","H",
+              "B","R","A","V","E",
               "","","","","",
-              "L","I","V","E","S"
+              "C","L","O","U","D"
             ],
             "across": [
-              { "num": 1, "clue": "Greeting" },
-              { "num": 2, "clue": "Planet we live on" },
-              { "num": 3, "clue": "Plural of life" }
+              { "num": 1, "clue": "A fruit" },
+              { "num": 2, "clue": "Courageous" },
+              { "num": 3, "clue": "White sky" }
             ],
             "down": []
           }
