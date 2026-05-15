@@ -41,6 +41,8 @@ function buildGrid(p) {
         numSpan.style.left = '2px';
         numSpan.style.fontSize = '0.7em';
         numSpan.style.color = '#555';
+        // Ensure it's above the input
+        numSpan.style.zIndex = '2';
         div.appendChild(numSpan);
       }
       // Input field
@@ -56,13 +58,15 @@ function buildGrid(p) {
       inp.style.bottom = '0';
       inp.style.border = '1px solid #999';
       inp.style.borderRadius = '2px';
-      inp.style.background = '#fff';
+      inp.style.background = 'transparent'; // important: see the number underneath
       inp.style.fontSize = '1.2rem';
       inp.style.textAlign = 'center';
       inp.style.textTransform = 'uppercase';
       inp.style.outline = 'none';
       inp.style.boxSizing = 'border-box';
       inp.style.padding = '0';
+      // Input should be below number
+      inp.style.zIndex = '1';
       inp.addEventListener('input', e => {
         e.target.value = e.target.value.toUpperCase();
         div.dataset.answer = e.target.value;
