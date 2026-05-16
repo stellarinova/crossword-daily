@@ -1,19 +1,75 @@
 {
   "date": "2026-05-16",
-  "width": 4,
-  "height": 4,
-  "cells": [1,2,3,4,5,0,0,0,6,0,0,0,7,0,0,0],
-  "solution": ["L","A","K","E","A","R","E","A","K","E","Y","S","E","A","S","E"],
+  "solution": [
+    "L",
+    "A",
+    "K",
+    "E",
+    "A",
+    "R",
+    "E",
+    "A",
+    "K",
+    "E",
+    "Y",
+    "S",
+    "E",
+    "A",
+    "S",
+    "E"
+  ],
   "across": [
-    {"num": 1, "clue": "Body of water"},
-    {"num": 5, "clue": "Extent of surface"},
-    {"num": 6, "clue": "Objects for opening locks"},
-    {"num": 7, "clue": "Freedom from difficulty"}
+    {
+      "num": 1,
+      "clue": "Body of water"
+    },
+    {
+      "num": 5,
+      "clue": "Extent of surface"
+    },
+    {
+      "num": 6,
+      "clue": "Objects for opening locks"
+    },
+    {
+      "num": 7,
+      "clue": "Freedom from difficulty"
+    }
   ],
   "down": [
-    {"num": 1, "clue": "Body of water"},
-    {"num": 2, "clue": "Extent of surface"},
-    {"num": 3, "clue": "Objects for opening locks"},
-    {"num": 4, "clue": "Freedom from difficulty"}
+    {
+      "num": 1,
+      "clue": "Body of water"
+    },
+    {
+      "num": 2,
+      "clue": "Extent of surface"
+    },
+    {
+      "num": 3,
+      "clue": "Objects for opening locks"
+    },
+    {
+      "num": 4,
+      "clue": "Freedom from difficulty"
+    }
+  ],
+  "cells": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    0,
+    0,
+    0,
+    6,
+    0,
+    0,
+    0,
+    7,
+    0,
+    0,
+    0
   ]
 }
