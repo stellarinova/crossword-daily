@@ -73,6 +73,38 @@ jobs:
                 {"num": 3, "clue": "Heavy metal (4)"},
                 {"num": 4, "clue": "Woman (4)"}
               ]
+            },
+            {
+              "date": "2026-05-15",
+              "solution": ["C","A","R","D","A","R","E","A","R","E","A","D","D","A","Y","S"],
+              "across": [
+                {"num": 1, "clue": "Play cards (4)"},
+                {"num": 5, "clue": "Extent of surface (4)"},
+                {"num": 6, "clue": "Peruse (4)"},
+                {"num": 7, "clue": "24-hour periods (4)"}
+              ],
+              "down": [
+                {"num": 1, "clue": "Play cards (4)"},
+                {"num": 2, "clue": "Extent of surface (4)"},
+                {"num": 3, "clue": "Peruse (4)"},
+                {"num": 4, "clue": "24-hour periods (4)"}
+              ]
+            },
+            {
+              "date": "2026-05-15",
+              "solution": ["G","A","S","P","A","R","E","A","S","E","A","L","P","E","A","R"],
+              "across": [
+                {"num": 1, "clue": "Gasp for air (4)"},
+                {"num": 5, "clue": "Extent of surface (4)"},
+                {"num": 6, "clue": "Marine mammal (4)"},
+                {"num": 7, "clue": "Fruit (4)"}
+              ],
+              "down": [
+                {"num": 1, "clue": "Gasp for air (4)"},
+                {"num": 2, "clue": "Extent of surface (4)"},
+                {"num": 3, "clue": "Marine mammal (4)"},
+                {"num": 4, "clue": "Fruit (4)"}
+              ]
             }
           ]
 
