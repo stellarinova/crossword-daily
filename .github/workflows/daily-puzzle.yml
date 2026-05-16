@@ -140,4 +140,4 @@ jobs:
             git push
           else
             echo "No changes in puzzle.json"
-          fi# Trigger for new puzzle
+          fi
