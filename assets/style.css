@@ -1,5 +1,5 @@
 body { font-family: sans-serif; margin: 2rem; }
-#grid { display: inline-grid; margin-bottom: 1rem; }
+#grid { display: grid; margin-bottom: 1rem; }
 .cell {
   width: 2.2rem; height: 2.2rem;
   border: 1px solid #444;
