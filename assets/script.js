@@ -18,7 +18,10 @@ fetch('puzzle.json')
 function buildGrid(p) {
   const grid = document.getElementById('grid');
   grid.innerHTML = '';
-  grid.style.gridTemplateColumns = `repeat(${p.width}, auto)`;
+  // Set explicit column and row tracks based on cell size
+  const cellSize = '2.2rem'; // must match .cell width/height
+  grid.style.gridTemplateColumns = `repeat(${p.width}, ${cellSize})`;
+  grid.style.gridTemplateRows = `repeat(${p.height}, ${cellSize})`;
 
   p.cells.forEach((cell, idx) => {
     console.log(`Processing cell idx=${idx}, value=${cell}`);
