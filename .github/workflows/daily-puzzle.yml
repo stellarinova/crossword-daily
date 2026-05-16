@@ -1,4 +1,3 @@
-# Last manually triggered: 2026-05-16 01:35:12 UTC
 name: Daily Crossword Build
 on:
   schedule:
@@ -57,40 +56,6 @@ jobs:
                 {"num": 2, "clue": "Not closed (4)"},
                 {"num": 3, "clue": "Beloved (4)"},
                 {"num": 4, "clue": "Finishes (4)"}
-              ]
-            },
-            {
-              "date": "2026-05-15",
-              "solution": ["B","A","L","L","A","R","E","A","L","E","A","D","L","A","D","Y"],
-              "across": [
-                {"num": 1, "clue": "Round object (4)"},
-                {"num": 5, "clue": "Extent of surface (4)"},
-                {"num": 6, "clue": "Heavy metal (4)"},
-                {"num": 7, "clue": "Woman (4)"}
-              ],
-              "down": [
-                {"num": 1, "clue": "Round object (4)"},
-                {"num": 2, "clue": "Extent of surface (4)"},
-                {"num": 3, "clue": "Heavy metal (4)"},
-                {"num": 4, "clue": "Woman (4)"}
-              ]
-            }
-          ]
-            },
-            {
-              "date": "2026-05-15",
-              "solution": ["L","A","K","E","A","R","E","A","K","E","Y","S","E","A","S","E"],
-              "across": [
-                {"num": 1, "clue": "Body of water"},
-                {"num": 5, "clue": "Extent of surface"},
-                {"num": 6, "clue": "Objects for opening locks"},
-                {"num": 7, "clue": "Freedom from difficulty"}
-              ],
-              "down": [
-                {"num": 1, "clue": "Body of water"},
-                {"num": 2, "clue": "Extent of surface"},
-                {"num": 3, "clue": "Objects for opening locks"},
-                {"num": 4, "clue": "Freedom from difficulty"}
               ]
             },
             {
