@@ -1,57 +1,57 @@
 {
-  "date": "2026-05-16",
+  "date": "2026-05-17",
   "solution": [
-    "L",
-    "A",
-    "K",
+    "C",
+    "O",
+    "D",
+    "E",
+    "O",
+    "P",
+    "E",
+    "N",
+    "D",
     "E",
     "A",
     "R",
     "E",
-    "A",
-    "K",
-    "E",
-    "Y",
-    "S",
-    "E",
-    "A",
-    "S",
-    "E"
+    "N",
+    "D",
+    "S"
   ],
   "across": [
     {
       "num": 1,
-      "clue": "Body of water"
+      "clue": "Cipher (4)"
     },
     {
       "num": 5,
-      "clue": "Extent of surface"
+      "clue": "To uncover (4)"
     },
     {
       "num": 6,
-      "clue": "Objects for opening locks"
+      "clue": "Dear (affectionate) (4)"
     },
     {
       "num": 7,
-      "clue": "Freedom from difficulty"
+      "clue": "Terminates (4)"
     }
   ],
   "down": [
     {
       "num": 1,
-      "clue": "Body of water"
+      "clue": "System of symbols (4)"
     },
     {
       "num": 2,
-      "clue": "Extent of surface"
+      "clue": "Not closed (4)"
     },
     {
       "num": 3,
-      "clue": "Objects for opening locks"
+      "clue": "Beloved (4)"
     },
     {
       "num": 4,
-      "clue": "Freedom from difficulty"
+      "clue": "Finishes (4)"
     }
   ],
   "cells": [
