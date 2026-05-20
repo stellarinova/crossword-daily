@@ -1,27 +1,27 @@
 {
-  "date": "2026-05-19",
+  "date": "2026-05-20",
   "solution": [
-    "C",
+    "G",
     "A",
-    "R",
-    "D",
-    "A",
-    "R",
-    "E",
+    "S",
+    "P",
     "A",
     "R",
     "E",
     "A",
-    "D",
-    "D",
+    "S",
+    "E",
     "A",
-    "Y",
-    "S"
+    "L",
+    "P",
+    "E",
+    "A",
+    "R"
   ],
   "across": [
     {
       "num": 1,
-      "clue": "Play cards (4)"
+      "clue": "Gasp for air (4)"
     },
     {
       "num": 5,
@@ -29,17 +29,17 @@
     },
     {
       "num": 6,
-      "clue": "Peruse (4)"
+      "clue": "Marine mammal (4)"
     },
     {
       "num": 7,
-      "clue": "24-hour periods (4)"
+      "clue": "Fruit (4)"
     }
   ],
   "down": [
     {
       "num": 1,
-      "clue": "Play cards (4)"
+      "clue": "Gasp for air (4)"
     },
     {
       "num": 2,
@@ -47,11 +47,11 @@
     },
     {
       "num": 3,
-      "clue": "Peruse (4)"
+      "clue": "Marine mammal (4)"
     },
     {
       "num": 4,
-      "clue": "24-hour periods (4)"
+      "clue": "Fruit (4)"
     }
   ],
   "cells": [
