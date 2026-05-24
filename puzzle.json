@@ -1,27 +1,27 @@
 {
-  "date": "2026-05-23",
+  "date": "2026-05-24",
   "solution": [
-    "B",
+    "C",
     "A",
-    "L",
-    "L",
+    "R",
+    "D",
     "A",
     "R",
     "E",
     "A",
-    "L",
+    "R",
     "E",
     "A",
     "D",
-    "L",
-    "A",
     "D",
-    "Y"
+    "A",
+    "Y",
+    "S"
   ],
   "across": [
     {
       "num": 1,
-      "clue": "Round object (4)"
+      "clue": "Play cards (4)"
     },
     {
       "num": 5,
@@ -29,17 +29,17 @@
     },
     {
       "num": 6,
-      "clue": "Heavy metal (4)"
+      "clue": "Peruse (4)"
     },
     {
       "num": 7,
-      "clue": "Woman (4)"
+      "clue": "24-hour periods (4)"
     }
   ],
   "down": [
     {
       "num": 1,
-      "clue": "Round object (4)"
+      "clue": "Play cards (4)"
     },
     {
       "num": 2,
@@ -47,11 +47,11 @@
     },
     {
       "num": 3,
-      "clue": "Heavy metal (4)"
+      "clue": "Peruse (4)"
     },
     {
       "num": 4,
-      "clue": "Woman (4)"
+      "clue": "24-hour periods (4)"
     }
   ],
   "cells": [
